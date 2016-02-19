@@ -5,8 +5,9 @@ angular.module('myApp', [
   'ngRoute',
   'myApp.view1',
   'myApp.view2',
+  'myApp.directives',
   'myApp.version'
-]).
-config(['$routeProvider', function($routeProvider) {
-  $routeProvider.otherwise({redirectTo: '/view1'});
-}]);
+])
+
+// Seperate module with custom d3 directives
+angular.module('myApp.directives', ['data']);
